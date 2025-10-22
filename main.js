@@ -14,3 +14,25 @@ const cars = [
   { brand: "Mercedes", model: "Classe C", fuel: "elettrico" },
   { brand: "Peugeot", model: "208", fuel: "metano" },
 ];
+
+const auto_benzina = [];
+
+const auto_diesel = [];
+
+const auto_rimaste = [];
+
+for (let index = 0; index < cars.length; index++) {
+  const singleCars = cars[index];
+
+  if (singleCars.fuel == "benzina") {
+    auto_benzina.push(`brand: ${singleCars.brand}, model: ${singleCars.model}`);
+  } else if (singleCars.fuel == "diesel") {
+    auto_diesel.push(`brand: ${singleCars.brand}, model: ${singleCars.model}`);
+  } else {
+    auto_rimaste.push(`brand: ${singleCars.brand}, model: ${singleCars.model}`);
+  }
+}
+
+console.log(auto_benzina);
+console.log(auto_diesel);
+console.log(auto_rimaste);
