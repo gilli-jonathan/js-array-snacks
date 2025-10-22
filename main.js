@@ -41,7 +41,7 @@ console.log(auto_diesel);
 console.log(auto_rimaste);
 
 //VERSIONE CON IL FOREACH
-
+/*
 cars.forEach((singleCars) => {
   if (singleCars.fuel === "benzina") {
     auto_benzina.push(`brand: ${singleCars.brand}, model: ${singleCars.model}`);
@@ -55,3 +55,18 @@ cars.forEach((singleCars) => {
 console.log(auto_benzina);
 console.log(auto_diesel);
 console.log(auto_rimaste);
+*/
+
+//VERSIONE CON .FILTER
+
+const benzina = cars.filter((car) => car.fuel === "benzina");
+
+const diesel = cars.filter((car) => car.fuel === "diesel");
+
+const altro = cars.filter(
+  (car) => car.fuel !== "diesel" && car.fuel !== "benzina"
+);
+
+console.log(benzina);
+console.log(diesel);
+console.log(altro);
