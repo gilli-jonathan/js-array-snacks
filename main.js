@@ -15,12 +15,14 @@ const cars = [
   { brand: "Peugeot", model: "208", fuel: "metano" },
 ];
 
+//VERSIONE CON IL CICLO FOR CLASSICO
 const auto_benzina = [];
 
 const auto_diesel = [];
 
 const auto_rimaste = [];
 
+/*
 for (let index = 0; index < cars.length; index++) {
   const singleCars = cars[index];
 
@@ -32,6 +34,23 @@ for (let index = 0; index < cars.length; index++) {
     auto_rimaste.push(`brand: ${singleCars.brand}, model: ${singleCars.model}`);
   }
 }
+  */
+
+console.log(auto_benzina);
+console.log(auto_diesel);
+console.log(auto_rimaste);
+
+//VERSIONE CON IL FOREACH
+
+cars.forEach((singleCars) => {
+  if (singleCars.fuel === "benzina") {
+    auto_benzina.push(`brand: ${singleCars.brand}, model: ${singleCars.model}`);
+  } else if (singleCars.fuel === "diesel") {
+    auto_diesel.push(`brand: ${singleCars.brand}, model: ${singleCars.model}`);
+  } else {
+    auto_rimaste.push(`brand: ${singleCars.brand}, model: ${singleCars.model}`);
+  }
+});
 
 console.log(auto_benzina);
 console.log(auto_diesel);
